@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -6,8 +6,15 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-darker-violet: #190c49;
+  --color-darker-violet-1: #14023d;
+  --color-darker-violet-2: #0d001f;
+  --color-darker-green: #3f4f44;
+  --color-darker-green-1: #2c3930;
+  --color-primary-text: #dcd7c9;
+  --font-size-10xl: 10rem;
+  --font-size-11xl: 12rem;
+  --font-size-12xl: 15rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +24,30 @@
   }
 }
 
+.matteo-text {
+  color: var(--color-primary-text);
+  font-family: 'Geist', sans-serif;
+}
+
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(
+    to right,
+    var(--color-darker-green-1),
+    var(--color-darker-green),
+    var(--color-darker-green)
+  );
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-10xl {
+  font-size: var(--font-size-10xl);
+}
+
+.text-11xl {
+  font-size: var(--font-size-11xl);
+}
+
+.text-12xl {
+  font-size: var(--font-size-12xl);
 }
