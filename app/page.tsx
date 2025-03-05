@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
-import { FaJsSquare, FaReact, FaNode, FaGithub } from 'react-icons/fa';
-import { SiPostgresql, SiPython, SiTypescript, SiJest } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
 
 import MatteoCodes from '@/components/MatteoCodes';
+import { useMobile } from '@/context/MobileContext';
+import SkillsList from '@/components/SkillsList';
 
 export default function Home() {
+  const { isMobile } = useMobile();
+
   return (
     <div
       className="container text-white mx-auto h-full p-6 border-2"
@@ -17,53 +19,15 @@ export default function Home() {
       }}
     >
       <MatteoCodes />
-
-      <section className="text-2xl mb-12">
+      <section className={`${isMobile ? 'text-2xl' : 'text-3xl'} mb-12`}>
         <p className="mb-4">
-          I&apos;m a <strong>results-driven JavaScript Developer</strong> with{' '}
-          <strong>10+ years of project management</strong> experience. Known for
-          my adaptability, determination, and strong collaboration, I deliver
-          technical solutions while managing projects and teams in dynamic
-          environments.
+          I&apos;m a <strong>JavaScript Developer</strong> with{' '}
+          <strong>over ten years of project management</strong> experience.
+          Known for my adaptability, determination, and strong collaboration, I
+          deliver technical solutions while managing projects and teams in
+          dynamic environments.
         </p>
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-20">
-          <li className="flex items-center">
-            <FaJsSquare className="text-yellow-500 text-3xl mr-2" />
-            <span>JavaScript</span>
-          </li>
-          <li className="flex items-center">
-            <SiTypescript className="text-blue-600 text-3xl mr-2" />
-            <span>TypeScript</span>
-          </li>
-          <li className="flex items-center">
-            <FaReact className="text-blue-500 text-3xl mr-2" />
-            <span>React.js</span>
-          </li>
-          <li className="flex items-center">
-            <TbBrandNextjs className="text-black text-3xl mr-2" />
-            <span>Next.js</span>
-          </li>
-          <li className="flex items-center">
-            <FaNode className="text-green-500 text-3xl mr-2" />
-            <span>Node.js</span>
-          </li>
-          <li className="flex items-center">
-            <SiJest className="text-pink-500 text-3xl mr-2" />
-            <span>Jest</span>
-          </li>
-          <li className="flex items-center">
-            <SiPostgresql className="text-indigo-500 text-3xl mr-2" />
-            <span>PostgreSQL</span>
-          </li>
-          <li className="flex items-center">
-            <FaGithub className="text-gray-600 text-3xl mr-2" />
-            <span>Git & GitHub</span>
-          </li>
-          <li className="flex items-center">
-            <SiPython className="text-blue-500 text-3xl mr-2" />
-            <span>Python (learning)</span>
-          </li>
-        </ul>
+        <SkillsList />
       </section>
     </div>
   );

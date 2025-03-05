@@ -4,7 +4,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <div
-      className="container text-white mx-auto p-6 border-2"
+      className="container text-white mx-auto p-6 border-2 h-full"
       style={{
         // backgroundColor: 'var(--color-dark-blue-2)',
         borderBottomLeftRadius: '3rem',

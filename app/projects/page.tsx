@@ -45,7 +45,7 @@ export default function Projects() {
           your tastes.
         </p>
 
-        <p className="mb-4">
+        <div className="mb-4">
           Key Features:
           <ul className="list-disc ml-6">
             <li>
@@ -65,7 +65,7 @@ export default function Projects() {
               scalable performance
             </li>
           </ul>
-        </p>
+        </div>
 
         <p className="mb-4">
           Check out the open-source code and contribute to the project on{' '}
