@@ -10,7 +10,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const widthLimit = 920;
+  const widthLimit = 1024;
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <MobileContext.Provider value={{ isMobile }}>
       <html lang="en" suppressHydrationWarning={true}>
-        <body className="flex relative">
+        <body className="flex min-h-screen relative">
           <p
             className="absolute right-0 transform text-8xl text-transparent opacity-10 font-extrabold matteo-text z-[-1]"
             style={{ userSelect: 'none' }}
@@ -53,7 +53,9 @@ export default function RootLayout({
             javascript developer
           </p>
           <main
-            className={`w-full [${widthLimit}]:w-7/8 pr-6 pb-6 pl-6 h-auto overflow-x-hidden`}
+            className={`w-full ${
+              isMobile ? 'pb-20' : ''
+            } flex-grow overflow-x-hidden overflow-y-auto`}
           >
             {children}
           </main>
