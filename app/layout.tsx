@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <MobileContext.Provider value={{ isMobile }}>
       <html lang="en" suppressHydrationWarning={true}>
-        <body className="flex flex-col min-h-screen relative">
+        <body className="flex relative">
           <p
             className="absolute right-0 transform text-8xl text-transparent opacity-10 font-extrabold matteo-text z-[-1]"
             style={{ userSelect: 'none' }}
@@ -53,7 +53,7 @@ export default function RootLayout({
             javascript developer
           </p>
           <main
-            className={`w-full [${widthLimit}]:w-7/8 pr-6 pb-6 pl-6 h-auto flex-grow overflow-x-hidden overflow-y-auto min-h-screen`}
+            className={`w-full [${widthLimit}]:w-7/8 pr-6 pb-6 pl-6 h-auto overflow-x-hidden`}
           >
             {children}
           </main>
