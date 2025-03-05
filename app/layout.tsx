@@ -1,17 +1,21 @@
 'use client';
 import { useState, useEffect } from 'react';
-import NavLink from '@/components/NavLink';
-import { NAV_LINKS } from '@/utils/constants';
 import './globals.css';
 import { MobileContext } from '@/context/MobileContext';
+import { UAParser } from 'ua-parser-js';
+import RenderNavLinks from '@/components/RenderNavLinks';
+import RenderContactLinks from '@/components/RenderContactLinks';
+import { mobile, UAParser_value } from '@/utils/constants';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { device } = UAParser(UAParser_value);
+  const isSSRMobile = device.is(mobile);
+  const [isMobile, setIsMobile] = useState(isSSRMobile);
   const widthLimit = 1024;
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -24,23 +28,6 @@ export default function RootLayout({
       return () => window.removeEventListener('resize', checkScreenWidth);
     }
   }, []);
-
-  const renderNavLinks = () => {
-    return NAV_LINKS.map((n, i) => {
-      const IconComponent = n.icon;
-
-      return isMobile ? (
-        <NavLink key={i} href={n.href} isMobile={isMobile}>
-          {IconComponent && <IconComponent />}
-          {!isMobile && n.title}
-        </NavLink>
-      ) : (
-        <NavLink key={i} href={n.href} isMobile={isMobile}>
-          {n.title}
-        </NavLink>
-      );
-    });
-  };
 
   return (
     <MobileContext.Provider value={{ isMobile }}>
@@ -67,11 +54,18 @@ export default function RootLayout({
                 borderColor: 'var(--color-border)',
               }}
             >
-              <div className="flex justify-evenly p-4">{renderNavLinks()}</div>
+              <div className="flex justify-evenly p-4">
+                <RenderNavLinks />
+              </div>
             </div>
           ) : (
-            <aside className="w-1/5 p-4 sticky top-0 h-screen flex flex-col">
-              {renderNavLinks()}
+            <aside className="w-1/5 p-4 sticky top-0 h-screen flex flex-col justify-between">
+              <div className="flex flex-col">
+                <RenderNavLinks />
+              </div>
+              <div className="flex flex-row justify-center">
+                <RenderContactLinks />
+              </div>
             </aside>
           )}
         </body>
