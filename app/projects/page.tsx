@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import MatteoCodes from '@/components/MatteoCodes';
 
 export default function Projects() {
@@ -24,9 +25,8 @@ export default function Projects() {
               color: 'var(--color-background)',
             }}
           >
-            &quot;whichfilm?&quot;
+            &quot;whichfilm?&quot; Project [whichfilm-xi.vercel.app]
           </a>{' '}
-          Project
         </h2>
         <p className="mb-4">
           <strong>WhichFilm?</strong> is a dynamic web application built with{' '}
@@ -36,7 +36,6 @@ export default function Projects() {
           and discover the perfect indie film from a curated selection of
           hundreds of award-winning movies.
         </p>
-
         <p className="mb-4">
           With real-time search capabilities, a user-friendly interface, and
           advanced filtering options, <strong>WhichFilm?</strong> makes it
@@ -76,9 +75,50 @@ export default function Projects() {
           >
             GitHub
           </a>
-          . Explore the power of film discovery with <strong>WhichFilm?</strong>{' '}
-          today!
+          .
         </p>
+      </section>
+
+      <section className="mb-12">
+        <h3 className="text-2xl font-semibold mb-4">Screenshots</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex justify-center items-center">
+            <Image
+              src="/whichfilm/whichfilm-home.png"
+              alt="WhichFilm Home Page"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <Image
+              src="/whichfilm/whichfilm-films.png"
+              alt="WhichFilm Film List"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <Image
+              src="/whichfilm/whichfilm-filter.png"
+              alt="WhichFilm Filter"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <Image
+              src="/whichfilm/whichfilm-about.png"
+              alt="WhichFilm About Page"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
