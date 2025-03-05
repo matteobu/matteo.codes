@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+
 import MatteoCodes from '@/components/MatteoCodes';
 
 export default function Contacts() {
@@ -27,18 +29,16 @@ export default function Contacts() {
         <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
         <ul className="space-y-4">
           <li className="flex items-center">
-            <FaEnvelope className="text-pink-500 text-3xl mr-2" />
+            <FaEnvelope className=" text-3xl mr-2" />
             <span>
-              Email:{' '}
               <a href="mailto:matteo.codes@pm.me" className="text-pink-300">
                 matteo.codes@pm.me
               </a>
             </span>
           </li>
           <li className="flex items-center">
-            <FaGithub className="text-gray-600 text-3xl mr-2" />
+            <FaGithub className=" text-3xl mr-2" />
             <span>
-              GitHub:{' '}
               <a
                 href="https://github.com/matteobu"
                 target="_blank"
@@ -49,9 +49,8 @@ export default function Contacts() {
             </span>
           </li>
           <li className="flex items-center">
-            <FaLinkedin className="text-blue-600 text-3xl mr-2" />
+            <FaLinkedin className=" text-3xl mr-2" />
             <span>
-              LinkedIn:{' '}
               <a
                 href="https://www.linkedin.com/in/matteo-bucciol/"
                 className="text-blue-300"
@@ -62,15 +61,14 @@ export default function Contacts() {
             </span>
           </li>
           <li className="flex items-center">
-            <FaTwitter className="text-blue-400 text-3xl mr-2" />
+            <FaSquareXTwitter className=" text-3xl mr-2" />
             <span>
-              Twitter:{' '}
               <a
-                href="https://twitter.com/ehi.dev"
+                href="https://twitter.com/dev_m_"
                 className="text-blue-300"
                 target="_blank"
               >
-                @ehi.dev
+                @dev_m_
               </a>
             </span>
           </li>

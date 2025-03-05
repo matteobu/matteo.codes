@@ -1,12 +1,8 @@
 import React from 'react';
 import { FaJsSquare, FaReact, FaNode, FaGithub } from 'react-icons/fa';
-import {
-  SiPostgresql,
-  SiPython,
-  SiTypescript,
-  SiNextdotjs,
-  SiJest,
-} from 'react-icons/si';
+import { SiPostgresql, SiPython, SiTypescript, SiJest } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
+
 import MatteoCodes from '@/components/MatteoCodes';
 
 export default function Home() {
@@ -44,7 +40,7 @@ export default function Home() {
             <span>React.js</span>
           </li>
           <li className="flex items-center">
-            <SiNextdotjs className="text-black text-3xl mr-2" />
+            <TbBrandNextjs className="text-black text-3xl mr-2" />
             <span>Next.js</span>
           </li>
           <li className="flex items-center">
