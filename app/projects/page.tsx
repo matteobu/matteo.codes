@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Projects() {
   return (
     <div
-      className="container text-white mx-auto p-6 border-2"
+      className="container text-white mx-auto p-6 border-2 h-full"
       style={{
         borderBottomLeftRadius: '3rem',
         borderBottomRightRadius: '3rem',

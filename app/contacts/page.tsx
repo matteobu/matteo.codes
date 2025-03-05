@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 export function Contacts() {
   return (
     <div
-      className="container text-white mx-auto p-6 border-2"
+      className="container text-white mx-auto p-6 border-2 h-full"
       style={{
         borderBottomLeftRadius: '3rem',
         borderBottomRightRadius: '3rem',
