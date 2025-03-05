@@ -9,7 +9,7 @@ import {
   SiJest,
 } from 'react-icons/si';
 
-export function Home() {
+export default function Home() {
   return (
     <div
       className="container text-white mx-auto h-full p-6 border-2"
@@ -75,5 +75,3 @@ export function Home() {
     </div>
   );
 }
-
-export default Home;

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
-export function Contacts() {
+export default function Contacts() {
   return (
     <div
       className="container text-white mx-auto p-6 border-2 h-full"
@@ -111,5 +111,3 @@ export function Contacts() {
     </div>
   );
 }
-
-export default Contacts;
