@@ -1,23 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className="container text-green-600 mx-auto p-6">
-      <h1 className="text-4xl font-bold text-center mb-8">
-        About Me (Hold Tight, I Promise This Gets Better… Probably)
-      </h1>
+    <div
+      className="container text-white mx-auto p-6 border-2"
+      style={{
+        // backgroundColor: 'var(--color-dark-blue-2)',
+        borderBottomLeftRadius: '3rem',
+        borderBottomRightRadius: '3rem',
+        borderColor: 'var(--color-border)',
+        color: 'var(--color-text)',
+      }}
+    >
+      <div className="flex items-center gap-4 mb-8">
+        <Image src="/logo.svg" alt="Matteo.codes Logo" width={50} height={50} />
+        <h1 className="text-4xl font-bold">
+          About Me (Hold Tight, I Promise This Gets Better… Probably)
+        </h1>
+      </div>
 
       <section className="text-lg mb-12">
-        <p className="mb-4">
-          I&apos;m a <strong>results-driven JavaScript Developer</strong> with
-          over <strong>10 years of project management experience</strong>. My
-          adaptability, determination, and resilience have shaped my ability to
-          deliver technical solutions while managing processes, projects, and
-          teams. My colleagues often praise my strong collaboration and
-          analytical mindset, as well as my ability to thrive in dynamic
-          environments.
-        </p>
-
         <h2 className="text-2xl font-semibold mb-4">Technical Skills</h2>
         <ul className="list-disc pl-6 mb-6">
           <li>

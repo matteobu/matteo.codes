@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Archia';
+  src: url('/fonts/archia-regular-webfont.woff2') format('woff2'),
+    url('/fonts/archia-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -12,6 +20,12 @@
   --color-darker-green: #3f4f44;
   --color-darker-green-1: #2c3930;
   --color-primary-text: #dcd7c9;
+  /* Pastel */
+  --color-background: #14110f;
+  --color-section: #373737;
+  --color-border: #f09d51;
+  --color-text: #f3b072;
+  /*  */
   --font-size-10xl: 10rem;
   --font-size-11xl: 12rem;
   --font-size-12xl: 15rem;
@@ -31,13 +45,14 @@
 
 body {
   color: var(--foreground);
-  background: linear-gradient(
+  background: var(--color-background);
+  /* background: linear-gradient(
     to right,
     var(--color-darker-green-1),
     var(--color-darker-green),
     var(--color-darker-green)
-  );
-  font-family: Arial, Helvetica, sans-serif;
+  ); */
+  font-family: 'Archia', sans-serif;
 }
 
 .text-10xl {
@@ -50,4 +65,16 @@ body {
 
 .text-12xl {
   font-size: var(--font-size-12xl);
+}
+
+.isActive {
+  background-color: var(--color-border);
+  color: var(--color-background);
+  border-color: var(--color-border);
+}
+
+.isInactive {
+  background-color: var(--color-background);
+  color: var(--color-border);
+  border-color: var(--color-border);
 }
