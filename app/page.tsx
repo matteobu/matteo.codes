@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { FaJsSquare, FaReact, FaNode, FaGithub } from 'react-icons/fa';
 import {
   SiPostgresql,
@@ -8,6 +7,7 @@ import {
   SiNextdotjs,
   SiJest,
 } from 'react-icons/si';
+import MatteoCodes from '@/components/MatteoCodes';
 
 export default function Home() {
   return (
@@ -20,10 +20,7 @@ export default function Home() {
         color: 'var(--color-text)',
       }}
     >
-      <div className="flex items-center gap-4 mb-8">
-        <Image src="/logo.svg" alt="Matteo.codes Logo" width={50} height={50} />
-        <h1 className="text-4xl font-bold">matteo.codes</h1>
-      </div>
+      <MatteoCodes />
 
       <section className="text-2xl mb-12">
         <p className="mb-4">

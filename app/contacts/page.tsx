@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import MatteoCodes from '@/components/MatteoCodes';
 
 export default function Contacts() {
   return (
@@ -13,10 +13,7 @@ export default function Contacts() {
         color: 'var(--color-text)',
       }}
     >
-      <div className="flex items-center gap-4 mb-8">
-        <Image src="/logo.svg" alt="Matteo.codes Logo" width={50} height={50} />
-        <h1 className="text-4xl font-bold">matteo.codes</h1>
-      </div>
+      <MatteoCodes />
 
       <section className="text-lg mb-12">
         <p className="mb-4">
