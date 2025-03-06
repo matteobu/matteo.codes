@@ -1,31 +1,30 @@
 import React from 'react';
 import Image from 'next/image';
-import MatteoCodes from '@/components/MatteoCodes';
+import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 
-export default function Projects() {
+export default function whichfilm() {
   return (
     <div
       className="container text-white mx-auto p-6 border-2 h-full"
       style={{
         borderBottomLeftRadius: '3rem',
         borderBottomRightRadius: '3rem',
-        borderColor: 'var(--color-border)',
-        color: 'var(--color-text)',
+        borderColor: 'var(--color-border-dark)',
+        color: 'var(--color-text-dark)',
       }}
     >
-      <MatteoCodes />
+      <MatteoCodesTitle />
 
       <section className="text-lg mb-12">
-        <h2 className="text-2xl font-semibold mb-4">
-          <a
-            href="https://whichfilm-xi.vercel.app/"
-            className="text-pink-300"
-            style={{
-              backgroundColor: 'var(--color-text)',
-              color: 'var(--color-background)',
-            }}
-          >
-            &quot;whichfilm?&quot; Project [whichfilm-xi.vercel.app]
+        <h2
+          className="text-2xl font-semibold mb-4"
+          style={{
+            backgroundColor: 'var(--color-text-dark)',
+            color: 'var(--color-background-dark)',
+          }}
+        >
+          <a href="https://whichfilm-xi.vercel.app/">
+            &quot;whichfilm?&quot; Project. Live on: [whichfilm-xi.vercel.app]
           </a>{' '}
         </h2>
         <p className="mb-4">
@@ -80,7 +79,15 @@ export default function Projects() {
       </section>
 
       <section className="mb-12">
-        <h3 className="text-2xl font-semibold mb-4">Screenshots</h3>
+        <h3
+          className="text-2xl font-semibold mb-4"
+          style={{
+            backgroundColor: 'var(--color-text-dark)',
+            color: 'var(--color-background-dark)',
+          }}
+        >
+          Screenshots
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex justify-center items-center">
             <Image

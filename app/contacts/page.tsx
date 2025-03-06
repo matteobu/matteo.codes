@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
-import MatteoCodes from '@/components/MatteoCodes';
+import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 
 export default function Contacts() {
   return (
@@ -15,7 +15,7 @@ export default function Contacts() {
         color: 'var(--color-text)',
       }}
     >
-      <MatteoCodes />
+      <MatteoCodesTitle />
 
       <section className="text-lg mb-12">
         <p className="mb-4">

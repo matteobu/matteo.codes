@@ -36,7 +36,7 @@ const skills = [
   },
   {
     icon: <SiPython className="text-blue-500 text-3xl mr-2" />,
-    name: 'Python (learning)',
+    name: 'Python(learning)',
   },
 ];
 
@@ -44,13 +44,18 @@ export default function SkillsList() {
   const { isMobile } = useMobile();
 
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-20">
-      {skills.map((skill, index) => (
-        <li key={index} className="flex items-center">
-          {skill.icon}
-          {!isMobile && <span>{skill.name}</span>}
-        </li>
-      ))}
-    </ul>
+    <>
+      <p className="mt-20" style={{ color: 'var(--color-title-dark)' }}>
+        Technical Skills
+      </p>
+      <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-2">
+        {skills.map((skill, index) => (
+          <li key={index} className="flex items-center">
+            {skill.icon}
+            {!isMobile && <span>{skill.name}</span>}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }

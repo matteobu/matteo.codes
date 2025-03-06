@@ -1,25 +1,21 @@
 'use client';
 import React from 'react';
-
-import MatteoCodes from '@/components/MatteoCodes';
-import { useMobile } from '@/context/MobileContext';
+import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 import SkillsList from '@/components/SkillsList';
 
 export default function Home() {
-  const { isMobile } = useMobile();
-
   return (
     <div
-      className="container text-white mx-auto h-full p-6 border-2"
+      className="container mx-auto h-auto m-2 p-6 border-2"
       style={{
         borderBottomLeftRadius: '3rem',
         borderBottomRightRadius: '3rem',
-        borderColor: 'var(--color-border)',
-        color: 'var(--color-text)',
+        borderColor: 'var(--color-border-dark)',
+        color: 'var(--color-text-dark)',
       }}
     >
-      <MatteoCodes />
-      <section className={`${isMobile ? 'text-2xl' : 'text-3xl'} mb-12`}>
+      <MatteoCodesTitle />
+      <section className={`text-2xl mb-12`}>
         <p className="mb-4">
           I&apos;m a <strong>JavaScript Developer</strong> with{' '}
           <strong>over ten years of project management</strong> experience.

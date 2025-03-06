@@ -8,7 +8,8 @@ export default function RenderContactLinks() {
           key={index}
           href={href}
           target="_blank"
-          className={`text-3xl m-1 ${color}`}
+          className={`text-3xl m-1`}
+          style={{ color: color }}
         >
           <Icon />
         </a>

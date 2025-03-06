@@ -14,18 +14,31 @@
 }
 
 :root {
-  --color-darker-violet: #190c49;
-  --color-darker-violet-1: #14023d;
-  --color-darker-violet-2: #0d001f;
-  --color-darker-green: #3f4f44;
-  --color-darker-green-1: #2c3930;
-  --color-primary-text: #dcd7c9;
-  /* Pastel */
-  --color-background: #14110f;
-  --color-section: #373737;
-  --color-border: #f09d51;
-  --color-text: #f3b072;
-  /*  */
+  /* DARK */
+  /*  
+#14110F - Very dark brownish-black  
+#373737 - Dark gray  
+#F09D51 - Warm orange  
+#F3B072 - Soft peach/orange  
+#e1d9b8 - Soft warm off-white
+*/
+  --color-background-dark: #14110f;
+  --color-section-dark: #373737;
+  --color-border-dark: #f09d51;
+  --color-title-dark: #f3b072;
+  --color-text-dark: #e1d9b8;
+  /* LIGHT */
+  /*  
+#EBEEF0 - Light grayish-blue  
+#C8C8C8 - Soft silver  
+#0F62AE - Deep blue  
+#0C4F8D - Rich blue  
+*/
+  --color-background-light: #ebeef0;
+  --color-section-light: #c8c8c8;
+  --color-border-light: #0f62ae;
+  --color-text-light: #0c4f8d;
+  /* TEXT */
   --font-size-10xl: 10rem;
   --font-size-11xl: 12rem;
   --font-size-12xl: 15rem;
@@ -33,19 +46,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background-dark: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
 .matteo-text {
-  color: var(--color-border);
+  color: var(--color-border-dark);
   font-family: 'Geist', sans-serif;
 }
 
 body {
   color: var(--foreground);
-  background: var(--color-background);
+  background: var(--color-background-dark);
   /* background: linear-gradient(
     to right,
     var(--color-darker-green-1),
@@ -68,13 +81,13 @@ body {
 }
 
 .isActive {
-  background-color: var(--color-border);
-  color: var(--color-background);
-  border-color: var(--color-border);
+  background-color: var(--color-border-dark);
+  color: var(--color-background-dark);
+  border-color: var(--color-border-dark);
 }
 
 .isInactive {
-  background-color: var(--color-background);
-  color: var(--color-border);
-  border-color: var(--color-border);
+  background-color: var(--color-background-dark);
+  color: var(--color-border-dark);
+  border-color: var(--color-border-dark);
 }
