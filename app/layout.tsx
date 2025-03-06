@@ -22,7 +22,7 @@ export default function RootLayout({
           {children}
         </main>
         <div
-          className="w-full fixed bottom-0 left-0 shadow-lg z-50 border-t-2 h-auto lg:hidden"
+          className="w-full fixed bottom-0 left-0 shadow-lg border-t-2 h-auto lg:hidden"
           style={{
             backgroundColor: 'var(--color-background-dark)',
             borderColor: 'var(--color-border-dark)',
