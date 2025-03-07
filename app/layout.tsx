@@ -3,6 +3,7 @@ import React from 'react';
 import './globals.css';
 import RenderNavLinks from '@/components/RenderNavLinks';
 import RenderContactLinks from '@/components/RenderContactLinks';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -41,6 +42,7 @@ export default function RootLayout({
             <RenderContactLinks />
           </div>
         </aside>
+        <Analytics />
       </body>
     </html>
   );
