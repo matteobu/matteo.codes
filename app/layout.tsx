@@ -19,7 +19,6 @@ export default function RootLayout({
           name="description"
           content="my personal website, designed and developed by Matteo Bucciol"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
         <Header />

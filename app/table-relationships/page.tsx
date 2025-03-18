@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 import TableRelationshipsPlugin from '@/components/TableRelationshipsPlugin';
 import { TbBlocks } from 'react-icons/tb';
 
@@ -15,8 +14,6 @@ export default function Table() {
         color: 'var(--color-text-dark)',
       }}
     >
-      <MatteoCodesTitle />
-
       <section className="text-lg mb-12">
         <h2
           className="text-2xl font-semibold mb-4"
