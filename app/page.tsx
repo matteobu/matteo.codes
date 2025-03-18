@@ -1,30 +1,24 @@
 'use client';
 import React from 'react';
-import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 import SkillsList from '@/components/SkillsList';
 
 export default function Home() {
   return (
-    <div
-      className="container mx-auto h-auto m-2 p-6 border-2"
-      style={{
-        borderBottomLeftRadius: '3rem',
-        borderBottomRightRadius: '3rem',
-        borderColor: 'var(--color-border-dark)',
-        color: 'var(--color-text-dark)',
-      }}
-    >
-      <MatteoCodesTitle />
-      <section className={`text-2xl mb-12`}>
-        <p className="mb-4">
-          I&apos;m a <strong>JavaScript Developer</strong> with{' '}
-          <strong>over ten years of project management</strong> experience.
-          Known for my adaptability, determination, and strong collaboration, I
-          deliver technical solutions while managing projects and teams in
-          dynamic environments.
+    <section>
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between w-full mt-20">
+        <p className="mb-4 text-3xl font-extrabold">
+          I am a Software Developer with a strong foundation in JavaScript,
+          TypeScript, React, Next.js and Node.js. Passionate about building
+          scalable, user-friendly applications, I specialize in developing
+          clean, efficient, and maintainable code. With experience in full-stack
+          development, automation, and Agile workflows, I thrive in
+          collaborative environments where innovation and problem-solving drive
+          impactful solutions.
         </p>
+      </div>
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between w-full mt-20">
         <SkillsList />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

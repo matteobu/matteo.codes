@@ -1,12 +1,9 @@
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: 'Archia';
-  src: url('/fonts/archia-regular-webfont.woff2') format('woff2'),
-    url('/fonts/archia-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600&display=swap');
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -14,6 +11,15 @@
 }
 
 :root {
+  /* LIGHT */
+  --light-gray: #ecdfcc;
+  --light-blue: #5f99ae;
+  --secondary-color: #2ecc71;
+  --font-primary: 'Spline Sans Mono', monospace;
+  --light-border-green: #697565;
+  --border-light: #0f62ae;
+  --text-light: #0c4f8d;
+
   /* DARK */
   /*  
 #14110F - Very dark brownish-black  
@@ -22,22 +28,12 @@
 #F3B072 - Soft peach/orange  
 #e1d9b8 - Soft warm off-white
 */
-  --color-background-dark: #14110f;
+  /* --color-background-dark: #14110f;
   --color-section-dark: #373737;
   --color-border-dark: #f09d51;
   --color-title-dark: #f3b072;
-  --color-text-dark: #e1d9b8;
-  /* LIGHT */
-  /*  
-#EBEEF0 - Light grayish-blue  
-#C8C8C8 - Soft silver  
-#0F62AE - Deep blue  
-#0C4F8D - Rich blue  
-*/
-  --color-background-light: #ebeef0;
-  --color-section-light: #c8c8c8;
-  --color-border-light: #0f62ae;
-  --color-text-light: #0c4f8d;
+  --color-text-dark: #e1d9b8; */
+
   /* TEXT */
   --font-size-10xl: 10rem;
   --font-size-11xl: 12rem;
@@ -51,21 +47,10 @@
   }
 }
 
-.matteo-text {
-  color: var(--color-border-dark);
-  font-family: 'Geist', sans-serif;
-}
-
 body {
-  color: var(--foreground);
-  background: var(--color-background-dark);
-  /* background: linear-gradient(
-    to right,
-    var(--color-darker-green-1),
-    var(--color-darker-green),
-    var(--color-darker-green)
-  ); */
-  font-family: 'Archia', sans-serif;
+  color: var(--text-light);
+  background: var(--light-gray);
+  font-family: 'Spline Sans Mono', monospace;
 }
 
 .text-10xl {

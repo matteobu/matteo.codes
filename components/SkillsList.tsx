@@ -18,7 +18,7 @@ const skills = [
     name: 'React.js',
   },
   {
-    icon: <TbBrandNextjs className="text-white text-3xl mr-2" />,
+    icon: <TbBrandNextjs className="text-black text-3xl mr-2" />,
     name: 'Next.js',
   },
   {
@@ -45,9 +45,6 @@ export default function SkillsList() {
 
   return (
     <>
-      <p className="mt-20" style={{ color: 'var(--color-title-dark)' }}>
-        Technical Skills
-      </p>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-2">
         {skills.map((skill, index) => (
           <li key={index} className="flex items-center">

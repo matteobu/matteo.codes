@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import MatteoCodesTitle from '@/components/MatteoCodesTitle';
 
 export default function whichfilm() {
   return (
@@ -13,8 +12,6 @@ export default function whichfilm() {
         color: 'var(--color-text-dark)',
       }}
     >
-      <MatteoCodesTitle />
-
       <section className="text-lg mb-12">
         <h2
           className="text-2xl font-semibold mb-4"
