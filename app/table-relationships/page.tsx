@@ -22,7 +22,7 @@ export default function Table() {
             color: 'var(--color-background-dark)',
           }}
         >
-          <a href="/table">Table Relationships Project</a>{' '}
+          <a href="/table-relationships">Table Relationships Plugin</a>{' '}
         </h2>
         <p className="mb-4">
           I’m particularly proud of the{' '}
