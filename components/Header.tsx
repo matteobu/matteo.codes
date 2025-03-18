@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
+import { RxHamburgerMenu } from 'react-icons/rx';
+
 import {
   Menu,
   MenuButton,
@@ -14,15 +16,12 @@ const Header = () => {
   return (
     <header className="bg-lightblue w-full py-4 px-8 mt-10">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between w-full">
-        {/* Logo and Title */}
         <div className="flex items-center space-x-4">
           <Image src="/logo.png" alt="Logo" width={40} height={40} />
-          <h1 className="text-3xl font-extrabold">
+          <h1 className="text-3xl font-extrabold hidden md:block">
             <Link href="/">matteo.codes</Link>
           </h1>
         </div>
-
-        {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6">
           <Link
             href="/"
@@ -125,7 +124,9 @@ const Header = () => {
         <div className="md:hidden">
           <Menu as="div" className="relative">
             <MenuButton className="text-3xl">
-              <span className="material-icons">menu</span>{' '}
+              <span className="material-icons">
+                <RxHamburgerMenu />
+              </span>{' '}
               {/* Hamburger icon */}
             </MenuButton>
             <Transition
