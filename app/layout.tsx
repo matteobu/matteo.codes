@@ -14,10 +14,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <Head>
-        <title>matteo.codes</title>
-        <meta
-          name="description"
-          content="my personal website, designed and developed by Matteo Bucciol"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Matteo Bucciol',
+              url: 'https://matteo.codes',
+              sameAs: [
+                'https://www.linkedin.com/in/matteo-bucciol',
+                'https://github.com/matteobu',
+                'https://twitter.com/dev_m_',
+              ],
+              image: 'https://matteo.codes/images/matteo.jpg',
+              description:
+                'Personal website of Matteo Bucciol, showcasing my projects and skills as a software developer.',
+            }),
+          }}
         />
       </Head>
       <body className="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
