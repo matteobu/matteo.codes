@@ -1,12 +1,9 @@
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: 'Archia';
-  src: url('/fonts/archia-regular-webfont.woff2') format('woff2'),
-    url('/fonts/archia-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600&display=swap');
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -14,6 +11,12 @@
 }
 
 :root {
+  /* Define custom CSS variables */
+  --light-gray: #ecdfcc;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-primary: 'Spline Sans Mono', monospace;
+
   /* DARK */
   /*  
 #14110F - Very dark brownish-black  
@@ -57,15 +60,15 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--color-background-dark);
+  color: var(--color-text-light);
+  background: var(--light-gray);
   /* background: linear-gradient(
     to right,
     var(--color-darker-green-1),
     var(--color-darker-green),
     var(--color-darker-green)
   ); */
-  font-family: 'Archia', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
 }
 
 .text-10xl {
