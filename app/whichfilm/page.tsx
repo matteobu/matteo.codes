@@ -82,11 +82,6 @@ export default function whichfilm() {
           </a>
           .
         </p>
-        <p className="mb-4 bg-[var(--light-blue)]">
-          Maybe you&apos;re the hiring manager at{' '}
-          <strong className="text-amber-500">JustWatch</strong>, and you&apos;re
-          already thinking, &quot;I need this person on our team!&quot;
-        </p>
       </section>
 
       <section className="mb-12">
