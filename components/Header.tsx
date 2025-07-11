@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 import {
@@ -105,18 +106,22 @@ const Header = () => {
           </Menu>
 
           <Link
-            href="/contacts"
-            className="text-xl font-bold hover:text-[var(--light-blue)] cursor-pointer"
+            href="mailto:matteo.codes@pm.me"
+            className="flex items-center text-xl font-bold hover:text-[var(--light-blue)] space-x-2 cursor-pointer"
           >
-            about
+            <FaEnvelope className="text-xl " />
           </Link>
-
           <Link
             href="https://github.com/matteobu"
             className="flex items-center text-xl font-bold hover:text-[var(--light-blue)] space-x-2 cursor-pointer"
           >
-            <span>github</span>
             <FaGithub className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/matteo-bucciol/"
+            className="flex items-center text-xl font-bold hover:text-[var(--light-blue)] space-x-2 cursor-pointer"
+          >
+            <FaLinkedin className=" text-xl" />
           </Link>
         </div>
 
@@ -205,7 +210,7 @@ const Header = () => {
                           : 'text-[var(--text-light)]'
                       } block px-4 py-2 text-sm cursor-pointer`}
                     >
-                      about
+                      contacts
                     </Link>
                   )}
                 </MenuItem>

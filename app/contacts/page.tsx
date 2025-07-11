@@ -25,21 +25,15 @@ export default function Contacts() {
         <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
         <ul className="space-y-4">
           <li className="flex items-center">
-            <FaEnvelope className=" text-3xl mr-2" />
+            <FaEnvelope className="text-3xl mr-2" />
             <span>
-              <a href="mailto:matteo.codes@pm.me" className="text-pink-300">
-                matteo.codes@pm.me
-              </a>
+              <a href="mailto:matteo.codes@pm.me">matteo.codes@pm.me</a>
             </span>
           </li>
           <li className="flex items-center">
             <FaGithub className=" text-3xl mr-2" />
             <span>
-              <a
-                href="https://github.com/matteobu"
-                target="_blank"
-                className="text-gray-300"
-              >
+              <a href="https://github.com/matteobu" target="_blank">
                 github.com/matteobu
               </a>
             </span>
@@ -49,7 +43,6 @@ export default function Contacts() {
             <span>
               <a
                 href="https://www.linkedin.com/in/matteo-bucciol/"
-                className="text-blue-300"
                 target="_blank"
               >
                 linkedin.com/in/matteo-bucciol
@@ -59,46 +52,13 @@ export default function Contacts() {
           <li className="flex items-center">
             <FaSquareXTwitter className=" text-3xl mr-2" />
             <span>
-              <a
-                href="https://twitter.com/dev_m_"
-                className="text-blue-300"
-                target="_blank"
-              >
+              <a href="https://twitter.com/dev_m_" target="_blank">
                 @dev_m_
               </a>
             </span>
           </li>
         </ul>
       </section>
-      {/* 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Send a Message</h2>
-        <form
-          action="https://formsubmit.co"
-          method="POST"
-          className="space-y-4"
-        >
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="p-3 w-full rounded-md border border-gray-300 bg-transparent text-white"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            className="p-3 w-full rounded-md border border-gray-300 bg-transparent text-white"
-            required
-          />
-          <button
-            type="submit"
-            className="p-3 w-full rounded-md bg-pink-500 text-white"
-          >
-            Send Message
-          </button>
-        </form>
-      </section> */}
     </div>
   );
 }
