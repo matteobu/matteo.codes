@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section>
       <div className="max-w-screen-xl mx-auto flex flex-col items-start justify-between w-full mt-20">
-        <p className="mb-4 text-3xl font-extrabold">
+        <p className="mb-4 text-3xl ">
           I’m a Software Developer who enjoys turning ideas into practical,
           user-focused applications. I work across the stack using{' '}
           <span className="text-yellow-500">JavaScript</span> (

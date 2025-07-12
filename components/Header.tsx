@@ -123,6 +123,76 @@ const Header = () => {
           >
             <FaLinkedin className=" text-xl" />
           </Link>
+          <Menu as="div" className="relative">
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <MenuItems className="absolute right-0 w-48 mt-2 origin-center bg-[var(--light-gray)] rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border-1 border-[var(--border-light)]">
+                <MenuItem>
+                  {({ focus }) => (
+                    <Link
+                      href="/whichfilm"
+                      className={`${
+                        focus
+                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                          : 'text-[var(--text-light)]'
+                      } block px-4 py-2 text-sm cursor-pointer`}
+                    >
+                      whichfilm?
+                    </Link>
+                  )}
+                </MenuItem>
+                <MenuItem>
+                  {({ focus }) => (
+                    <Link
+                      href="/table-relationships"
+                      className={`${
+                        focus
+                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                          : 'text-[var(--text-light)]'
+                      } block px-4 py-2 text-sm cursor-pointer`}
+                    >
+                      table rel. plugin
+                    </Link>
+                  )}
+                </MenuItem>
+                <MenuItem>
+                  {({ focus }) => (
+                    <Link
+                      href="/tree"
+                      className={`${
+                        focus
+                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                          : 'text-[var(--text-light)]'
+                      } block px-4 py-2 text-sm cursor-pointer`}
+                    >
+                      tree plugin
+                    </Link>
+                  )}
+                </MenuItem>
+                <MenuItem>
+                  {({ focus }) => (
+                    <Link
+                      href="/resume"
+                      className={`${
+                        focus
+                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                          : 'text-[var(--text-light)]'
+                      } block px-4 py-2 text-sm cursor-pointer`}
+                    >
+                      my awesome resume
+                    </Link>
+                  )}
+                </MenuItem>
+              </MenuItems>
+            </Transition>
+          </Menu>
         </div>
 
         {/* Mobile Navigation using Menu for hamburger */}
@@ -200,34 +270,50 @@ const Header = () => {
                     </Link>
                   )}
                 </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <Link
-                      href="/contacts"
-                      className={`${
-                        focus
-                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
-                          : 'text-[var(--text-light)]'
-                      } block px-4 py-2 text-sm cursor-pointer`}
-                    >
-                      contacts
-                    </Link>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <Link
-                      href="https://github.com/matteobu"
-                      className={`${
-                        focus
-                          ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
-                          : 'text-[var(--text-light)]'
-                      } block px-4 py-2 text-sm cursor-pointer`}
-                    >
-                      github
-                    </Link>
-                  )}
-                </MenuItem>
+                <div className="flex items-center justify-between py-2 ">
+                  <MenuItem>
+                    {({ focus }) => (
+                      <Link
+                        href="mailto:matteo.codes@pm.me"
+                        className={`${
+                          focus
+                            ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                            : 'text-[var(--text-light)]'
+                        } block px-4 py-2 text-sm cursor-pointer`}
+                      >
+                        <FaEnvelope className="text-xl " />
+                      </Link>
+                    )}
+                  </MenuItem>
+                  <MenuItem>
+                    {({ focus }) => (
+                      <Link
+                        href="https://github.com/matteobu"
+                        className={`${
+                          focus
+                            ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                            : 'text-[var(--text-light)]'
+                        } block px-4 py-2 text-sm cursor-pointer`}
+                      >
+                        <FaGithub className="text-xl" />
+                      </Link>
+                    )}
+                  </MenuItem>
+                  <MenuItem>
+                    {({ focus }) => (
+                      <Link
+                        href="https://www.linkedin.com/in/matteo-bucciol/"
+                        className={`${
+                          focus
+                            ? 'bg-[var(--light-blue)] text-[var(--text-light)]'
+                            : 'text-[var(--text-light)]'
+                        } block px-4 py-2 text-sm cursor-pointer`}
+                      >
+                        <FaLinkedin className=" text-xl" />
+                      </Link>
+                    )}
+                  </MenuItem>
+                </div>
               </MenuItems>
             </Transition>
           </Menu>
