@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { TbMoodCrazyHappyFilled } from 'react-icons/tb';
 
 import { RxHamburgerMenu } from 'react-icons/rx';
 
@@ -23,7 +24,7 @@ const Header = () => {
             <Link href="/">matteo.codes</Link>
           </h1>
         </div>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-4">
           <Link
             href="/"
             className="text-xl font-bold hover:text-[var(--light-blue)] cursor-pointer"
@@ -122,6 +123,12 @@ const Header = () => {
             className="flex items-center text-xl font-bold hover:text-[var(--light-blue)] space-x-2 cursor-pointer"
           >
             <FaLinkedin className=" text-xl" />
+          </Link>
+          <Link
+            href="https://www.youtube.com/watch?v=sWblpsLZ-O8&ab_channel=lftkryo"
+            className="flex items-center text-xl font-bold hover:text-[var(--light-blue)] space-x-2 cursor-pointer"
+          >
+            <TbMoodCrazyHappyFilled className=" text-xl" />
           </Link>
           <Menu as="div" className="relative">
             <Transition
